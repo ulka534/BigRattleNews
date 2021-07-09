@@ -1,0 +1,44 @@
+<h2 style="text-align: center;">News Sources</h2>
+<div class="container">
+    <div class="row custom-wrapper">
+        <div class="col-md-4 offset-md-4">
+
+            <!-- Form starts -->
+            <form [formGroup]="registrationForm">
+                <div class="d-block my-3">
+
+                    <div class="mb-3">
+                        <select class="custom-select" (change)="changeCountry($event)" formControlName="countryName">
+                            <option value="">Choose your Country</option>
+                            <option *ngFor="let item of Country" [ngValue]="item">{{item}}</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="custom-select" (change)="changeLanguage($event)" formControlName="langName">
+                            <option value="">Choose your Language</option>
+                            <option *ngFor="let item of lang" [ngValue]="item">{{item}}</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="custom-select" (change)="changeCategory($event)" formControlName="categoryName">
+                            <option value="">Choose your Category</option>
+                            <option *ngFor="let item of category" [ngValue]="item">{{item}}</option>
+                        </select>
+                    </div>
+                </div>
+            </form><!-- Form ends -->
+
+        </div>
+    </div>
+
+    <ul class="listing">
+        <li *ngFor="let data of sourceList; let i = index">
+            <h4>{{data.name}}</h4>
+            <p>{{data.description}}</p>
+            <p> <a href="{{data.url}}" target="_blank">{{data.url}}</a></p>
+            <p>{{data.category}}</p>
+            <p>{{data.language}}</p>
+            <p>{{data.country}}</p>
+        </li>
+    </ul>
+</div>

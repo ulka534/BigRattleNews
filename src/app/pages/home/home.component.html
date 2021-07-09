@@ -1,0 +1,59 @@
+<h2 style="text-align: center;">Top headlines in the US</h2>
+<ul class="listing">
+    <li *ngFor="let data of usHeadlines; let i = index">
+        <h4>{{data.title}}</h4>
+        <h6>{{data.author}}</h6>
+        <p>{{data.description}}</p>
+        <p> <a href="{{data.url}}" target="_blank">{{data.url}}</a></p>
+        <p>{{data.source.name}}</p>
+        <div class="body">
+            <img class="img-responsive img-rounded" style="width: 600px; height: 300px;" src="{{data.urlToImage}}"
+                alt="pic-test">
+        </div>
+    </li>
+</ul>
+
+<h2 style="text-align: center;">Top headlines from BBC News</h2>
+<ul class="listing">
+    <li *ngFor="let data of bbcHeadlines; let i = index">
+        <h4>{{data.title}}</h4>
+        <h6>{{data.author}}</h6>
+        <p>{{data.description}}</p>
+        <p> <a href="{{data.url}}" target="_blank">{{data.url}}</a></p>
+        <p>{{data.source.name}}</p>
+        <div class="body">
+            <img class="img-responsive img-rounded" style="width: 600px; height: 300px;" src="{{data.urlToImage}}"
+                alt="pic-test">
+        </div>
+    </li>
+</ul>
+
+<h2 style="text-align: center;">Top business headlines from Germany</h2>
+<ul class="listing">
+    <li *ngFor="let data of germanyHeadlines; let i = index">
+        <h4>{{data.title}}</h4>
+        <h6>{{data.author}}</h6>
+        <p>{{data.description}}</p>
+        <p> <a href="{{data.url}}" target="_blank">{{data.url}}</a></p>
+        <p>{{data.source.name}}</p>
+        <div class="body">
+            <img class="img-responsive img-rounded" style="width: 600px; height: 300px;" src="{{data.urlToImage}}"
+                alt="pic-test">
+        </div>
+    </li>
+</ul>
+
+<h2 style="text-align: center;">Top headlines about Trump</h2>
+<ul class="listing">
+    <li *ngFor="let data of trumpHeadlines; let i = index">
+        <h4>{{data.title}}</h4>
+        <h6>{{data.author}}</h6>
+        <p>{{data.description}}</p>
+        <p> <a href="{{data.url}}" target="_blank">{{data.url}}</a></p>
+        <p>{{data.source.name}}</p>
+        <div class="body">
+            <img class="img-responsive img-rounded" style="width: 600px; height: 300px;" src="{{data.urlToImage}}"
+                alt="pic-test">
+        </div>
+    </li>
+</ul>
